@@ -20,14 +20,14 @@ export default function Greeting() {
             initial={{ x: 0 }}
             animate={{ x: -xValue }}
             transition={{ ease: "linear", duration: 0.3 }}
-            className="absolute top-1/2 left-1/2 -translate-y-[50%] -translate-x-[50%] text-light sm:text-2xl z-[10]"
+            className="absolute top-1/2 left-1/2 -translate-y-[50%] -translate-x-[50%] text-light text-sm md:text-2xl z-[10]"
           >
             <p>Nice to Meet You!</p>
           </motion.div>
           <div
             data-scroll
             data-scroll-speed=".4"
-            className="relative -top-[150px] sm:-top-[300px] z-0"
+            className="relative -top-[150px] md:-top-[250px] lg:-top-[300px] z-0"
           >
             <img
               src={portrait}

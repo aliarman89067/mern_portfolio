@@ -8,7 +8,7 @@ export default function SkillCard({ data }) {
       initial={{ x: -50, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ ease: [0.61, 1, 0.88, 1], duration: 0.5, delay: 0.5 }}
-      className="flex flex-col bg-light rounded-md h-[320px] overflow-hidden"
+      className="flex flex-col bg-light rounded-md h-[260px] overflow-hidden"
     >
       {data.map((item, index) => {
         return (
@@ -21,7 +21,7 @@ export default function SkillCard({ data }) {
                     alt="icons"
                     className="w-5 h-5 object-cover"
                   />
-                  {item.heading}
+                  <p className="text-sm font-medium">{item.heading}</p>
                 </div>
               </div>
             )}
@@ -31,8 +31,8 @@ export default function SkillCard({ data }) {
                   index === 1 && "mt-3"
                 }`}
               >
-                <p className="mr-3 text-[#1E3860]">{number++}</p>
-                {item.text}
+                <p className="mr-3 text-[#1E3860] text-sm">{number++}</p>
+                <p className="text-sm">{item.text}</p>
               </div>
             )}
           </div>

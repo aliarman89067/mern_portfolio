@@ -20,8 +20,12 @@ export default function Navbar() {
         className="absolute -bottom-[2px] left-1/5 w-[calc(100%-160px)] border-b border-light/70 h-14"
       ></motion.div>
       <div className="flex gap-10 items-center z-10">
-        <Link to="/">Home</Link>
-        <Link to="/projects">Projects</Link>
+        <Link to="/" className="text-sm">
+          Home
+        </Link>
+        <Link to="/projects" className="text-sm">
+          Projects
+        </Link>
       </div>
       <div className="w-full max-md:hidden"></div>
     </div>

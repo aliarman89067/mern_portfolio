@@ -24,37 +24,7 @@ export default function Skills() {
         {/* Right Section */}
         <div className="relative h-screen w-full pl-10 max-lg:hidden">
           <div className="w-full h-full flex justify-center items-center">
-            <div className="absolute flex flex-wrap z-10">
-              {description.split("").map((item, index) => (
-                <motion.p
-                  key={index}
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{
-                    ease: [0.61, 1, 0.88, 1],
-                    duration: 0.3,
-                    delay: index * 0.03,
-                  }}
-                  className={`text-light leading-6 ${
-                    item === " " && "ml-[5px]"
-                  }`}
-                >
-                  {item}
-                </motion.p>
-              ))}
-            </div>
-            <div className="absolute flex flex-wrap z-[2]">
-              {description.split("").map((item, index) => (
-                <p
-                  key={index}
-                  className={`text-zinc-400 leading-6 ${
-                    item === " " && "ml-[5px]"
-                  }`}
-                >
-                  {item}
-                </p>
-              ))}
-            </div>
+            <p className="z-10 text-sm leading-[24px]">{description}</p>
           </div>
           <div
             data-scroll
