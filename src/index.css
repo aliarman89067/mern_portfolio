@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+html {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+.coverGradient {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(252, 213, 206, 1) 0%,
+    rgba(238, 130, 238, 0) 100%
+  );
+}
+.bebas {
+  font-family: "Bebas Neue", sans-serif;
+}
+.wordwrap {
+  white-space: pre-wrap; /* Webkit */
+  white-space: -moz-pre-wrap; /* Firefox */
+  white-space: -pre-wrap; /* Opera <7 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* IE */
+}
+.landingDesc {
+  position: absolute;
+  right: 80px;
+  top: 20px;
+}
+@media screen and (max-width: 1024px) {
+  .landingDesc {
+    left: 80px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .landingDesc {
+    left: 40px;
+  }
+}
+.dark-overlay-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+.dark-overlay-left:hover::after {
+  opacity: 100;
+}
+.dark-overlay-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 40px);
+  height: 100%;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: all 0.5s linear;
+}
+.dark-overlay-right:hover::after {
+  opacity: 100;
+}
+
+@media screen and (max-width: 1280px) {
+  .dark-overlay-right::after {
+    width: 96%;
+  }
+  .dark-overlay-left::after {
+    width: 96%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .dark-overlay-right::after {
+    width: 100%;
+  }
+  .dark-overlay-left::after {
+    width: 100%;
+  }
+}
